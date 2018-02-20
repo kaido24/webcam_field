@@ -10,7 +10,7 @@
         cache: false
       })
         .done(function(html) {
-          $(elem).find('.webcam-image').append('<span class="webcam-popup-close">&times;</span><img src="' + html + '"><button class="webcam-popup-open btn btn-primary">'+ Drupal.t('Open modal') + '</button>');
+          $(elem).find('.webcam-image').append('<span class="webcam-popup-close">&times;</span><a href="#" class="webcam-popup-open"><img src="' + html + '"></a>');
           $(elem).find('.webcam-popup-open').on('click', function() {
             $(elem).addClass('webcam-modal');
             $(elem).find('.webcam-popup-close').show();
