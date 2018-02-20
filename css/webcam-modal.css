@@ -1,5 +1,5 @@
 /* The Modal (background) */
-.modal {
+.webcam-modal {
   display: block;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -15,14 +15,14 @@
 }
 
 /* Modal Content */
-.modal-content {
+.webcam-modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 10px;
   border: 1px solid #888;
   width: 80%;
 }
-.modal-content .webcam-popup-open {
+.webcam-modal-content .webcam-popup-open {
   display: none;
 }
 

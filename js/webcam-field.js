@@ -12,13 +12,13 @@
         .done(function(html) {
           $(elem).find('.webcam-image').append('<span class="webcam-popup-close">&times;</span><img src="' + html + '"><button class="webcam-popup-open btn btn-primary">'+ Drupal.t('Open modal') + '</button>');
           $(elem).find('.webcam-popup-open').on('click', function() {
-            $(elem).addClass('modal');
+            $(elem).addClass('webcam-modal');
             $(elem).find('.webcam-popup-close').show();
-            $(elem).find('.webcam-image').addClass('modal-content');
+            $(elem).find('.webcam-image').addClass('webcam-modal-content');
 
           });
           $(elem).find('.webcam-popup-close').on('click', function() {
-            $(elem).removeClass('modal');
+            $(elem).removeClass('webcam-modal');
             $(elem).find('.webcam-popup-close').hide();
             $(elem).find('.webcam-image').removeClass('modal-content');
           });
