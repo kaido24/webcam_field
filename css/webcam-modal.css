@@ -1,4 +1,7 @@
 /* The Modal (background) */
+.webcam-image {
+  max-width: 100%;
+}
 .webcam-modal {
   display: block;
   position: fixed; /* Stay in place */
