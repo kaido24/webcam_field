@@ -51,7 +51,8 @@ class WebCamFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
-    if ($items[0] === NULL) {
+    $user = \Drupal::currentUser();
+    if ($items[0] === NULL || !$user->hasPermission('view webcam')) {
       return [];
     }
     $field_info = $items[0]->getParent();
