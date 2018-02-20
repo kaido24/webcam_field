@@ -1,0 +1,4 @@
+
+view webcam:
+  title: 'View webcam'
+  description: 'Allow access to webcam route'

@@ -1,0 +1,8 @@
+webcam_field.update:
+  path: '/webcam/{entity_type}/{entity_id}/{field_name}/{delta}'
+  defaults:
+    _controller: '\Drupal\webcam_field\Controller\WebcamImageController::update'
+  requirements:
+    _permission: 'view webcam'
+  options:
+      no_cache: 'TRUE'

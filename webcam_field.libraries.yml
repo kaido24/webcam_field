@@ -1,0 +1,10 @@
+webcam:
+  version: 1.x
+  js:
+    js/webcam-field.js: {}
+  css:
+      theme:
+         css/webcam-modal.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

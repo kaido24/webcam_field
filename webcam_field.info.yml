@@ -1,0 +1,5 @@
+name: 'webcam_field'
+type: module
+description: 'Webcam field'
+core: 8.x
+package: 'Custom'
