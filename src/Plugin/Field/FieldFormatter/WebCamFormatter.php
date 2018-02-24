@@ -5,6 +5,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\webcam_field\Helper\WebcamHelper;
 /**
  * Plugin implementation of the 'web_cam_formatter' formatter.
  *
@@ -71,6 +72,8 @@ class WebCamFormatter extends FormatterBase {
         'delta' => $delta,
       ));
 
+      $data = new WebcamHelper();
+      $imgSrc = $data->cache($type, $id, $field_name, $delta, $item);
       // return $data;
       $htmlid = 'webcam-'. $type . '-'. $field_name. '-' .$delta;
       $data = '<div id="' . $htmlid .
@@ -80,6 +83,7 @@ class WebCamFormatter extends FormatterBase {
         #   '" data-field--delta="' . $delta .
         '" data-timeout="' . $item->refresh_rate .
         '" data-url="' . $url->tostring() .
+        '" data-imgdata="' . $imgSrc .
         '" class="webcam-content"><div class="webcam-image"></div></div>';
       $elements[$delta] = ['#markup' => $data];
     }
