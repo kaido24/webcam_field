@@ -24,7 +24,6 @@ class WebcamImageController extends ControllerBase {
       $response->setContent($camData['src']);
 
       if($this->currentTimeMillis() >= $camData['time'] ) {
-        ksm($camData['time']);
         $info = pathinfo($item->link);
         $data  = file_get_contents( $item->link);
         if ($data != false) {
